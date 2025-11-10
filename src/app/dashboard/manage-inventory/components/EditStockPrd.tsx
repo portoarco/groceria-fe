@@ -34,7 +34,6 @@ export default function EditStockProduct({
   setOpen,
   selectedProduct,
 }: IEditStockProduct) {
-  // console.log(selectedProduct);
   const [stockProductDetail, setStockProductDetail] = useState(selectedProduct);
   const [stockType, setStockType] = useState("");
   const [minStock, setMinStock] = useState<number>(

@@ -59,11 +59,6 @@ export default function DiscountHistory({
     discountType,
     searchQuery
   );
-  console.log(filteredDiscounts);
-  // const untuk selector
-  // const [searchQuery, setSearchQuery] = useState("");
-  // const [discountType, setDiscountType] = useState("all");
-  //
   const removeDiscount = useDiscountStore((state) => state.removeDiscount);
   const deleteDiscount = async (id: number) => {
     const confirm = window.confirm("Anda yakin delete discount ini ?");

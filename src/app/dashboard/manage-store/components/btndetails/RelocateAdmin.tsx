@@ -40,9 +40,7 @@ export default function RelocateAdmin({
   const [selectedStoreId, setSelectedStoreId] = useState<string>(
     adminData?.storeId ? adminData.storeId.toString() : ""
   );
-  //   console.log(adminData);
-  //   console.log(selectedStoreId);
-  //   console.log(storeList);
+
   const handlerChangeStore = async () => {
     if (!adminData?.adminId) return;
     try {

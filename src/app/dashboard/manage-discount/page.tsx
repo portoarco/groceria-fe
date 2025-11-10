@@ -25,8 +25,7 @@ export default function DiscountPage() {
     try {
       const res = await apiCall.get("/api/discount/all");
       const data = res.data.data;
-      // console.log(data);
-      // setDiscountData(data);
+
       setDiscounts(data);
     } catch (error) {
       console.log(error);

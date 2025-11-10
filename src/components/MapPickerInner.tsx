@@ -24,7 +24,6 @@ async function getAddressFromCoords(lat: number, long: number) {
   );
   const data = await res.json();
   const addr = data.address ?? {};
-  console.log(data);
 
   return {
     fullAddress: data.display_name || "",
@@ -114,7 +113,7 @@ function UseMyLocationButton({
       <button
         type="button"
         onClick={handleClick}
-        className="absolute bottom-2 right-3   z-[1000] px-4 py-2 bg-blue-600 text-white rounded-md shadow-lg flex items-center gap-2 hover:bg-blue-700"
+        className="absolute bottom-2 right-3   z-1000 px-4 py-2 bg-blue-600 text-white rounded-md shadow-lg flex items-center gap-2 hover:bg-blue-700"
       >
         <LocateIcon className="w-5 h-5" />
       </button>

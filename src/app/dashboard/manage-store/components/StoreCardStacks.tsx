@@ -28,7 +28,6 @@ export default function StoreCardStacks({ stores, className }: IStoreCard) {
 
   const handlerDelete = (data: IStoreProps) => {
     if (!data) return;
-    console.log(data);
   };
 
   return (

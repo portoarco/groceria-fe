@@ -46,7 +46,6 @@ export default function CustomerTable({
   stores,
 }: IUsersTable) {
   const [userList, setUserList] = useState<IUserProps[]>(customers);
-  // console.log(userList);
   const [searchQuery, setSearchQuery] = useState("");
   const [orderStatus, setOrderStatus] = useState<
     "all" | "verified" | "unverified"
@@ -86,10 +85,10 @@ export default function CustomerTable({
   const handlerDelete = async (data: IUserProps) => {
     if (data) {
       const userId = data.id;
-      console.log(userId);
+
       try {
         const res = await apiCall.delete(`/api/user/${userId}`);
-        console.log(res);
+
         toast.success("Delete User Data Success");
         setUserList((prev) => prev.filter((user) => user.id !== data.id));
         setDeleteConfirm(false);

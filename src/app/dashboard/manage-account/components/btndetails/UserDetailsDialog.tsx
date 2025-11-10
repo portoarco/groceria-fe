@@ -23,7 +23,6 @@ export default function UserDetailsDialog({
   setOpen,
   users,
 }: IUserDetailsDialog) {
-  console.log(users);
   const main_address =
     users.addresses?.find((addr: IUserAddressProps) => addr.is_primary)
       ?.street ?? "";
@@ -43,28 +42,6 @@ export default function UserDetailsDialog({
     full_address = (city ?? "") + (province ?? "");
   }
 
-  // const [openStoreSelect, setOpenStoreSelect] = useState(false);
-  // const [selectedStore, setSelectedStore] = useState<string | undefined>(
-  //   undefined
-  // );
-  // assign admin handler
-  // const handlerAssignAdmin = async (userId: string, storeId: string) => {
-  //   if (!storeId) return alert("You have to choose the store");
-  //   try {
-  //     const id = userId;
-  //     const store_id = parseInt(storeId);
-  //     const res = await apiCall.patch(`/api/user/new-admin/${id}`, {
-  //       store_id,
-  //     });
-  //     if (res && res.data.success) {
-  //       toast.success("Assign Admin Success");
-  //       setOpen(false);
-  //       window.location.reload();
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent>

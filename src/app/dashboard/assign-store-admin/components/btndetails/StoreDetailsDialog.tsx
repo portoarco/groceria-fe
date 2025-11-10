@@ -80,7 +80,6 @@ export default function StoreDetailsDialog({
       const res = await apiCall.patch(`/api/store/${store_id}`, { payload });
       if (res.data) {
         toast.success("Update Store Success");
-        console.log(res.data);
         setOpen(false);
         window.location.reload();
       }
@@ -101,7 +100,7 @@ export default function StoreDetailsDialog({
           </DialogHeader>
           <form id="storeForm" onSubmit={handleSubmit(onBtnSubmit)}>
             {/* Store Banner */}
-            
+
             {/* Store Profile */}
             <div id="store-name">
               <label className="text-sm">Name</label>

@@ -111,10 +111,9 @@ export default function CustomerTable({ className, stores }: IUsersTable) {
   const handlerDelete = async (data: IUserProps) => {
     if (data) {
       const userId = data.id;
-      console.log(userId);
       try {
         const res = await apiCall.patch(`/api/user/${userId}`);
-        console.log(res);
+
         toast.success("Delete User Data Success");
         setUserList((prev) => prev.filter((user) => user.id !== data.id));
         setDeleteConfirm(false);

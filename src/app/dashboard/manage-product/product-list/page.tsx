@@ -100,7 +100,6 @@ export default function ProductList() {
   useEffect(() => {
     getProductList();
   }, [page, limit, searchQuery, selectedCategory, selectedSort]);
-  console.log(products);
 
   useEffect(() => {
     const userJson = localStorage.getItem("user");

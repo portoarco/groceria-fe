@@ -40,7 +40,7 @@ export default function UsersDataCardStacks({
 
   const handlerDelete = (data: IUserProps) => {
     if (!data) return;
-    // console.log(data);
+
     toast.success("Delete Data Success");
   };
   return (

@@ -18,15 +18,6 @@ import {
 } from "@/components/ui/tooltip";
 import { getDistanceFromLatLonInKm } from "@/utils/distance";
 
-// interface Product {
-//   id: number;
-//   name: string;
-//   price: number;
-//   image: string;
-//   category: string;
-
-// }
-
 export default function ProductList() {
   const { city, province, latitude, longitude } = useLocationStore();
   // const [products, setProducts] = useState<Product[]>([]); // lama
@@ -51,11 +42,7 @@ export default function ProductList() {
             : `/api/product/landing/all`;
         const res = await apiCall.get(url);
 
-        console.log(res);
-        console.log(url);
-
         let result = res.data.data as IProductProps[];
-        console.log(result);
 
         // ⬇️ Sort by distance if lat/lon available
         if (latitude && longitude) {
@@ -125,7 +112,10 @@ export default function ProductList() {
   //   arco-end
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-3 flex flex-col" id="products">
+    <section
+      className="max-w-7xl mx-auto px-6 py-3 flex flex-col"
+      id="products"
+    >
       <div className="flex items-center gap-2 my-6">
         <Store size={20} />
         <h2 className="text-xl font-bold">

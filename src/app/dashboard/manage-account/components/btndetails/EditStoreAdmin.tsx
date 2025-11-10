@@ -78,7 +78,6 @@ export default function EditStoreAdmin({
     }
     try {
       const id = selectedUser;
-      console.log(id);
       const res = await apiCall.patch(`/api/user/update-user/${id}`, payload);
       alert("Edit store admin success");
       window.location.reload();

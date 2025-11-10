@@ -16,7 +16,6 @@ export default function InventoryPage() {
   useEffect(() => {
     const jsonData = JSON.parse(localStorage.getItem("user")!);
     if (!jsonData) return;
-    console.log(jsonData);
     if (jsonData.role === "STORE_ADMIN") {
       setAdminStoreData({
         role: jsonData.role,
@@ -32,7 +31,7 @@ export default function InventoryPage() {
   const getProductStock = async () => {
     try {
       const res = await apiCall.get("/api/stock/all");
-      //   console.log(res.data.data);
+
       const result = res.data.data;
       setStockProduct(result);
     } catch (error) {

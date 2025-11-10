@@ -73,11 +73,9 @@ export default function EditProductCategory({
   const editCategory = async () => {
     const newCat = categoryName.trim().toLowerCase();
     const oldCat = editCat?.category.trim().toLowerCase();
-    console.log(newCat, oldCat);
     if (!newCat) return alert("Harus ada isinya");
     try {
       const checkCat = arrCategories.some((cat) => cat === newCat);
-      console.log(checkCat);
       if (checkCat) return alert("Kategori sudah ada");
       const res = await apiCall.patch("/api/product/update-category", {
         data: { newCat, oldCat },

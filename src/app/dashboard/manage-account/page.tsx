@@ -19,7 +19,6 @@ export default function AccountPage() {
     withStore: [],
     withoutStore: [],
   });
-  console.log(storeAdmins);
   const [stores, setStores] = useState<IStoreProps[]>([]);
   useEffect(() => {
     const fetchAllData = async () => {

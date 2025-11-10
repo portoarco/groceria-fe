@@ -31,7 +31,6 @@ export default function StoreData({ className, stores }: IStoreAdminTable) {
   const [orderStatus, setOrderStatus] = useState<"active" | "inactive" | "all">(
     "all"
   );
-  // console.log(stores);
 
   const filteredStores = stores.filter(
     (store) =>

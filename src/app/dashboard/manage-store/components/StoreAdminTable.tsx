@@ -93,7 +93,6 @@ export default function StoreAdminData({
       if (!res) toast.error("Revert Store Admin Error");
       toast.success("Revert Admin Success");
       window.location.reload();
-      console.log(res.data.data);
     } catch (error) {
       console.log(error);
     }

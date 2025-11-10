@@ -45,7 +45,8 @@ export default function CreateNewDiscount({
 }: ICreateNewDiscount) {
   const [productByStore, setProductByStore] = useState<IProductProps[]>([]);
   const [selectedProduct, setSelectedProduct] = useState("");
-  const { selectedStore, setSelectedStore, fetchAllStores, storesData } = useStore();
+  const { selectedStore, setSelectedStore, fetchAllStores, storesData } =
+    useStore();
   const user = useAuthStore((state) => state.user);
   const [discountCode, setDiscountCode] = useState("");
   const [dateRange, setDateRange] = useState<{
@@ -116,8 +117,6 @@ export default function CreateNewDiscount({
       payload.valueType = valueType;
       payload.discAmount = Number(discAmount);
     }
-
-    console.log("Payload to submit:", payload);
 
     try {
       const res = await apiCall.post("/api/discount/new", { data: payload });

@@ -90,8 +90,6 @@ export default function SalesReport() {
     }
   };
 
-  // console.log(selectedDate);
-  // console.log(selectedStore);
   const getOrderList = async () => {
     const { month, year } = selectedDate;
     try {

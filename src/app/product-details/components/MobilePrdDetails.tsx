@@ -52,7 +52,6 @@ export default function MobilePrdDetails({
     (p) => p.category.category === selectedProductDetails?.category.category
   );
   const images = selectedProductDetails?.images.map((img) => img.image_url);
-  console.log(images);
   const router = useRouter();
   // store
   const storeIdentity = selectedProductDetails?.stocks.map((stock: any) => {

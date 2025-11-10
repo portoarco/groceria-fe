@@ -18,8 +18,6 @@ export default function InventoryHeader({ stocks }: IInventoryHeader) {
       ? stocks
       : stocks.filter((s) => s.store.id.toString() === selectedStore);
 
-  console.log(filteredStocks);
-
   const cardHeader = [
     {
       id: 1,

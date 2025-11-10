@@ -172,8 +172,6 @@ export default function StockHistory() {
     }
   };
 
-  // console.log(stockHistory);
-
   useEffect(() => {
     getStoreList();
   }, []);
